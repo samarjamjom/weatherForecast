@@ -1,0 +1,29 @@
+.content {
+  width: 400px;
+  height: 40px;
+  background-color: #0e103d;
+  margin: 10px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  padding: 3px;
+  margin-left: 20px;
+  position: relative;
+}
+.index {
+  background-color: rgb(102, 101, 101);
+  width: 30px;
+  height: 40px;
+  float: left;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+}
+.btn-back {
+  position: absolute;
+  left: 20px;
+  margin: 30px;
+  width: 100px;
+  height: 20px;
+  padding: 20px;
+  color: white;
+  background-color: rgb(102, 101, 101);
+}

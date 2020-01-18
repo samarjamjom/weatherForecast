@@ -1,0 +1,23 @@
+<head>
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<div class="content">
+  <div class="heading">
+    Weather Forecast
+    <br />
+    Today
+    <br />
+    and four days Later!
+  </div>
+
+  <button class="btn mycity" [routerLink]="['/cityWeather']">
+    your City Weather
+  </button>
+
+  <button class="btn around-my-city" [routerLink]="['/nearCities']">
+    Around Your City
+  </button>
+</div>

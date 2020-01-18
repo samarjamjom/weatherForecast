@@ -1,0 +1,15 @@
+<div class="form-group">
+  <label for="input_val" class="label">
+    Enter Region Name:
+  </label>
+
+  <input class="form-control" #searchInput type="text" id="input_val" />
+
+  <button
+    type="submit"
+    class="btn btn-default"
+    (click)="onCitySearch(searchInput.value)"
+  >
+    Search
+  </button>
+</div>

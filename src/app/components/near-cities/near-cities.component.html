@@ -1,0 +1,15 @@
+<div class="first" *ngIf="div1">
+  <app-search-bar (Search)="onCitySearch($event)"></app-search-bar>
+
+  <div
+    *ngFor="let wInfo of weatherInfo; index as i"
+    (click)="appearance()"
+    class="content"
+  >
+    <span class="index">{{ i + 1 }}</span>
+    <div class="name"></div>
+    {{ wInfo.name }}
+  </div>
+  <button class="btn-back" [routerLink]="['/home']">Back</button>
+</div>
+<app-city-weather *ngIf="div2" [data]="location"></app-city-weather>

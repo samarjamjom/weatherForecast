@@ -1,0 +1,31 @@
+.content {
+  width: 90vw;
+  height: 90vh;
+  background-color: #0e103d;
+  margin: 20px auto;
+}
+
+.heading {
+  font-size: 3em;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  left: 15%;
+  top: 30%;
+  text-transform: capitalize;
+}
+.btn {
+  position: relative;
+  top: 180px;
+  padding: 15px;
+  color: #0e103d;
+  font-weight: bold;
+  font-size: 1em;
+}
+.mycity {
+  left: 15%;
+}
+
+.around-my-city {
+  left: 20%;
+}

@@ -1,0 +1,23 @@
+<div class="body">
+  <div class="temp">
+    temperature will be <strong>{{ Weather.main.temp }}°C</strong>
+    <br />
+    that is mean it will be <strong>{{ Weather.weather[0].main }}</strong
+    >,
+    <br />
+    more exact it will be <strong> {{ Weather.weather[0].description }}</strong
+    >.
+    <br />
+    ,you will feel like to be <strong>{{ Weather.main.feels_like }}°C</strong>
+    <br />
+    so it range between <strong>{{ Weather.main.temp_min }}°C</strong> and
+    {{ Weather.main.temp_max }}°C
+    <br />
+    <br />
+    and about pressure , it will be
+    <strong>{{ Weather.main.pressure }}PASCAL</strong> also humidity , will be
+    <strong>{{ Weather.main.humidity }}g.kg-1</strong>
+    <br />
+    for Wind speed , it will be {{ Weather.wind.speed }}MPS
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<head>
+  <link
+    href="https://fonts.googleapis.com/css?family=Barlow|Dancing+Script|Nunito|Titillium+Web&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<div *ngIf="weatherAppear">
+  <div class="body" (click)="showDeatils(0)">
+    <h2 class="city cityName">
+      {{ Weather.city.name }}
+    </h2>
+
+    <h2 class="city cityTemp">{{ Weather.list[0].main.temp }} °C</h2>
+
+    <div class="city-day">
+      {{ today.day | date }}
+    </div>
+
+    <div class="image">
+      <img
+        src="http://openweathermap.org/img/wn/{{ today.icon }}@2x.png"
+        alt=""
+        class="imag"
+      />
+    </div>
+
+    <div class="right">
+      <img src="../../../assets/images/pressure.jpg" class="pres-img" alt="" />
+      <span class="pressure">
+        {{ today.pressure }}Pa
+        <br />
+      </span>
+      <img src="../../../assets/images/windspeed.png" class="wind-img" alt="" />
+      <span class="wind-speed"> {{ today.windSpeed }}MPS </span>
+    </div>
+
+    <div class="left">
+      <div class="max-temp">maxTemp:{{ today.tempMax }}°C</div>
+      <div class="min-temp">minTemp{{ today.tempMin }}°C</div>
+    </div>
+  </div>
+
+  <div class="other-day">
+    <div
+      *ngFor="let wInfo of weatherInfo; index as i"
+      class="box-val"
+      (click)="showDeatils(i + 1)"
+    >
+      <img
+        src="http://openweathermap.org/img/wn/{{ wInfo.icon }}@2x.png"
+        alt=""
+        class="imagC"
+      />
+      <div class="day">{{ wInfo.day | date }}</div>
+      <div class="temp">{{ wInfo.temp }}°C</div>
+    </div>
+  </div>
+
+  <button class="btn-back" [routerLink]="['/home']">Back</button>
+</div>
+
+<app-weather-details
+  *ngIf="weatherDetailsAppear"
+  [data]="Info"
+></app-weather-details>
