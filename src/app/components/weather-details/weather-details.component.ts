@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { WeatherService } from "../../services/weather.service";
+import { Location } from "@angular/common";
 
 @Component({
   selector: "app-weather-details",
@@ -6,8 +9,18 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./weather-details.component.scss"]
 })
 export class WeatherDetailsComponent implements OnInit {
-  constructor() {}
-  @Input("data") public Weather;
+  constructor(
+    private route: ActivatedRoute,
+    private weatherService: WeatherService,
+    private location: Location
+  ) {}
+  Weather;
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.Weather = this.weatherService.weather;
+  }
+
+  goBack() {
+    this.location.back();
+  }
 }

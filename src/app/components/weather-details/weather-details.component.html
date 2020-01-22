@@ -1,4 +1,4 @@
-<div class="body">
+<!-- <div class="body">
   <div class="temp">
     temperature will be <strong>{{ Weather.main.temp }}°C</strong>
     <br />
@@ -19,5 +19,38 @@
     <strong>{{ Weather.main.humidity }}g.kg-1</strong>
     <br />
     for Wind speed , it will be {{ Weather.wind.speed }}MPS
+  </div>
+</div> -->
+
+<div class="body">
+  <div class="temp">
+    <div class="header">
+      <span class="up-arrow">↑</span>
+      <div class="max">{{ Weather.main.temp_max }}°C</div>
+      <span class="down-arrow">↓</span>
+      <div class="min">{{ Weather.main.temp_min }}°C</div>
+    </div>
+    <div class="line"></div>
+    <div class="contain">
+      <div class="icon">
+        <img
+          src="http://openweathermap.org/img/wn/{{
+            Weather.weather[0].icon
+          }}@2x.png"
+          alt=""
+          class="left"
+        />
+        <div class="right">
+          {{ Weather.weather[0].main }}
+          <br />
+          {{ Weather.weather[0].description }}
+        </div>
+      </div>
+      <div class="wind">{{ Weather.wind.speed }} MPS</div>
+      <div class="line2"></div>
+      <div class="windtext">Windspeed</div>
+    </div>
+
+    <button class="btn-back" (click)="goBack()">Back</button>
   </div>
 </div>

@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { WeatherService } from "../../services/weather.service";
 import { WeatherInfo } from "../../classes/weather-info";
+import { Location } from "@angular/common";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-city-weather",
@@ -8,7 +10,11 @@ import { WeatherInfo } from "../../classes/weather-info";
   styleUrls: ["./city-weather.component.scss"]
 })
 export class CityWeatherComponent implements OnInit {
-  constructor(private weatherService: WeatherService) {}
+  constructor(
+    private router: Router,
+    private weatherService: WeatherService,
+    private Location: Location
+  ) {}
   @Input("data") public loc;
   URL;
   location;
@@ -52,16 +58,16 @@ export class CityWeatherComponent implements OnInit {
       });
     } else {
       this.getData(this.loc.latitude, this.loc.longitude);
-      console.log("YES");
     }
   }
 
   showDeatils(i) {
     i = i * 8;
-    this.Info = this.Weather.list[i];
-    console.log(i);
-    console.log(this.Info);
-    this.weatherAppear = false;
-    this.weatherDetailsAppear = true;
+    this.weatherService.setWeather(this.Weather.list[i]);
+    this.router.navigate(["weatherDetail"]);
+  }
+
+  goBack() {
+    this.Location.back();
   }
 }

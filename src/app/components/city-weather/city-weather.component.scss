@@ -1,139 +1,76 @@
-.body,
-.box-val {
-  width: 500px;
-  height: 400px;
-  position: relative;
-
+.body {
+  width: 400px;
+  height: 562px;
   margin: 20px auto;
   font-family: "Nunito", sans-serif;
-  color: rgba(255, 255, 255, 1);
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#11133f+1,0c0b2b+20,294c99+39,294c99+59,0c0b2b+79,11133f+100,2c539e+100,2c539e+100,2c539e+100,2c539e+100 */
-  background: rgb(17, 19, 63);
-  background: -moz-linear-gradient(
-    -45deg,
-    rgba(17, 19, 63, 1) 1%,
-    rgba(12, 11, 43, 1) 20%,
-    rgba(41, 76, 153, 1) 39%,
-    rgba(41, 76, 153, 1) 59%,
-    rgba(12, 11, 43, 1) 79%,
-    rgba(17, 19, 63, 1) 100%,
-    rgba(44, 83, 158, 1) 100%,
-    rgba(44, 83, 158, 1) 100%,
-    rgba(44, 83, 158, 1) 100%,
-    rgba(44, 83, 158, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    -45deg,
-    rgba(17, 19, 63, 1) 1%,
-    rgba(12, 11, 43, 1) 20%,
-    rgba(41, 76, 153, 1) 39%,
-    rgba(41, 76, 153, 1) 59%,
-    rgba(12, 11, 43, 1) 79%,
-    rgba(17, 19, 63, 1) 100%,
-    rgba(44, 83, 158, 1) 100%,
-    rgba(44, 83, 158, 1) 100%,
-    rgba(44, 83, 158, 1) 100%,
-    rgba(44, 83, 158, 1) 100%
-  );
-  background: linear-gradient(
-    135deg,
-    rgba(17, 19, 63, 1) 1%,
-    rgba(12, 11, 43, 1) 20%,
-    rgba(41, 76, 153, 1) 39%,
-    rgba(41, 76, 153, 1) 59%,
-    rgba(12, 11, 43, 1) 79%,
-    rgba(17, 19, 63, 1) 100%,
-    rgba(44, 83, 158, 1) 100%,
-    rgba(44, 83, 158, 1) 100%,
-    rgba(44, 83, 158, 1) 100%,
-    rgba(44, 83, 158, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11133f', endColorstr='#2c539e',GradientType=1 );
+  color: white;
+  font-weight: bold;
+  background-image: url("../../../assets/images/s56.jpg");
+  opacity: 0.9;
 }
-.city {
-  color: rgba(255, 255, 255, 1);
-  margin: 50px;
+.header {
+  text-align: center;
 }
-.cityName {
-  float: left;
-}
-
-.city-day {
-  position: relative;
-  left: -130px;
-}
-
 .image {
   position: relative;
-  top: -10%;
-  left: 25%;
+  top: -4%;
 }
-
-.imag {
-  border-radius: 5%;
-  width: 18em;
-  height: 13em;
-  opacity: 1;
-}
-
-.cityTemp {
-  font-size: 3em;
-  font-weight: bold;
+.right {
   float: right;
 }
-.sec {
+
+.left,
+.right {
   position: relative;
-  top: -60%;
-  left: 70%;
+  top: -7%;
 }
 
 .other-day {
-  width: 500px;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  margin: 20px auto;
+  margin: 10px;
   font-family: "Nunito", sans-serif;
 }
 
 .box-val {
+  height: 45px;
   margin: 5px;
-  height: 130px;
   font-size: 12px;
+  border: 2px solid white;
+  border-radius: 4px;
 }
-img.imagC {
-  width: 60px;
-  height: 60px;
+.box-val .image-left {
+  position: relative;
+  top: -15px;
+  width: 80px;
 }
 .day,
 .temp {
   margin: 5px;
+  float: right;
 }
 .pres-img,
 .wind-img {
   width: 20px;
   height: 20px;
 }
-.right {
-  position: absolute;
-  top: 200px;
-  left: 20px;
-}
-
-.left {
-  position: absolute;
-  top: 330px;
-  left: 25%;
-}
 
 .btn-back {
-  position: absolute;
-  left: 45%;
-  top: 560px;
-  margin: 30px;
-  width: 100px;
-  height: 20px;
-  padding: 20px;
-  color: white;
-  background-color: rgb(102, 101, 101);
+  float: right;
+  width: 70px;
+  height: 35px;
+  background-color: #eee;
+  color: rgb(3, 10, 14);
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.btn-back:hover {
+  color: #607d8b;
+  background-color: #ddd;
+}
+
+.box-val:hover {
+  color: #607d8b;
+  background-color: #ddd;
+  position: relative;
+  left: 3px;
 }

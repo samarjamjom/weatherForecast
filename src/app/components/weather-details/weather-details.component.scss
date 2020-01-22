@@ -1,5 +1,5 @@
-.body {
-  background-color: #0e103d;
+/* .body {
+  background-color: #093447;
   color: rgb(180, 169, 169);
   width: 80vw;
   height: 80vh;
@@ -8,8 +8,103 @@
   opacity: 0.9;
   font-size: 1.5em;
   padding: 50px;
+} */
+
+.body {
+  width: 400px;
+  height: 562px;
+  margin: 20px auto;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  background-color: rgb(20, 130, 144);
+  outline: 4px solid white;
+  outline-offset: -15px;
 }
 strong {
   font-family: monospace;
   color: rgb(0, 225, 255);
+}
+.temp {
+  width: 366px;
+  height: 528px;
+
+  position: relative;
+  left: 15px;
+  top: 15px;
+  background-color: rgb(34, 177, 196);
+}
+
+.header {
+  display: flex;
+}
+.up-arrow,
+.down-arrow {
+  font-size: 2.2em;
+  margin-left: 22%;
+}
+
+.max,
+.min {
+  width: 40px;
+}
+
+.up-arrow {
+  color: #eee;
+}
+
+.down-arrow {
+  color: #eee;
+}
+
+.line {
+  border-bottom: 1px dashed white;
+  margin-top: 5px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+  position: relative;
+  left: -185px;
+  top: 25px;
+}
+.wind {
+  position: relative;
+  top: 120px;
+  left: 20px;
+}
+
+.line2 {
+  text-align: center;
+  border-bottom: 1px dashed white;
+  margin-top: 5px;
+  position: relative;
+  top: 80px;
+  text-decoration: dashed;
+}
+
+.windtext {
+  position: relative;
+  top: 100px;
+  left: -90px;
+}
+
+.btn-back {
+  position: relative;
+  top: 407px;
+  float: right;
+  width: 70px;
+  height: 35px;
+  background-color: #eee;
+  color: rgb(3, 10, 14);
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.btn-back:hover {
+  color: #607d8b;
+  background-color: #ddd;
 }
